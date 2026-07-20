@@ -36,6 +36,8 @@ Appointment management platform with authentication, database integration, and C
 
 Interactive fitness website built using HTML, CSS, and JavaScript.
 
+## Contact
 
+GitHub: https://github.com/Sanjanaa343
 
 LinkedIn: https://linkedin.com/in/sanjanaa27
