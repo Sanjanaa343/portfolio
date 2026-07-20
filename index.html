@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjanaa S | Digital Research Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Space Grotesk', 'monospace'],
+                    },
+                    colors: {
+                        navy: {
+                            950: '#030712',
+                            900: '#0B132B',
+                            800: '#1C2541',
+                            700: '#3A506B',
+                        },
+                        electric: {
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                        },
+                        violetAccent: {
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(11, 19, 43, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel-hover:hover {
+            background: rgba(11, 19, 43, 0.60);
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1c2541;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans selection:bg-electric-500 selection:text-white relative overflow-x-hidden">
+
+    <!-- Ambient Interactive Particle Canvas -->
+    <canvas id="particle-canvas" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
+
+    <div class="relative z-10 flex flex-col min-h-screen">
+
+        <!-- HEADER / NAVIGATION -->
+        <header class="sticky top-0 w-full glass-panel z-50 border-b border-white/5">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-electric-500 to-violetAccent-500 flex items-center justify-center text-white font-mono font-bold text-lg shadow-lg shadow-electric-500/10 transition-transform group-hover:scale-105">
+                        SS
+                    </div>
+                    <div>
+                        <div class="font-mono text-sm tracking-wider font-bold text-white">SANJANAA S</div>
+                        <div class="text-[10px] text-slate-400 font-mono tracking-widest uppercase">IT Undergrad Node</div>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-8 font-mono text-xs tracking-wider">
+                    <a href="#academic-dashboard" class="text-slate-300 hover:text-electric-400 transition-colors">DASHBOARD</a>
+                    <a href="#learning-evolution" class="text-slate-300 hover:text-electric-400 transition-colors">EVOLUTION</a>
+                    <a href="#technical-profile" class="text-slate-300 hover:text-electric-400 transition-colors">COMPETENCIES</a>
+                    <a href="#featured-projects" class="text-slate-300 hover:text-electric-400 transition-colors">PROJECTS</a>
+                    <a href="#certifications" class="text-slate-300 hover:text-electric-400 transition-colors">CERTIFICATIONS</a>
+                    <a href="#leadership" class="text-slate-300 hover:text-electric-400 transition-colors">LEADERSHIP</a>
+                </nav>
+
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="font-mono text-[10px] text-emerald-400 uppercase tracking-widest">Active Node</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="relative min-h-[calc(100vh-80px)] flex items-center py-20 px-6">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 flex flex-col justify-center space-y-8">
+                    <div class="space-y-2">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-electric-500/10 border border-electric-500/20 text-electric-400 font-mono text-xs tracking-wide">
+                            <i class="fa-solid fa-graduation-cap text-[10px]"></i> B.Sc. Information Technology
+                        </div>
+                        <h2 class="text-slate-300 font-mono text-sm tracking-wide leading-relaxed">
+                            Shrimati Indira Gandhi College <span class="text-slate-500">|</span> Bharathidasan University
+                        </h2>
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight font-mono">
+                        SANJANAA S
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-slate-300 font-light leading-relaxed border-l-2 border-electric-500/50 pl-4">
+                        Exploring technology through continuous learning, practical projects, research-oriented thinking, and leadership.
+                    </p>
+
+                    <div class="text-xs text-slate-400 font-mono tracking-wide leading-relaxed">
+                        Department Rank Holder &nbsp;|&nbsp; AI Internship Experience &nbsp;|&nbsp; NPTEL Certified Learner &nbsp;|&nbsp; Active Student Leader
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-3 pt-2">
+                        <a href="https://linkedin.com/in/sanjanaa27" target="_blank" class="px-5 py-3 rounded-lg border border-electric-500/30 bg-electric-500/10 hover:bg-electric-500/20 text-white font-mono text-xs font-semibold tracking-wider flex items-center gap-2 transition-all">
+                            <i class="fa-brands fa-linkedin-in text-sm"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/Sanjanaa343" target="_blank" class="px-5 py-3 rounded-lg border border-violetAccent-500/30 bg-violetAccent-500/10 hover:bg-violetAccent-500/20 text-white font-mono text-xs font-semibold tracking-wider flex items-center gap-2 transition-all">
+                            <i class="fa-brands fa-github text-sm"></i> GitHub
+                        </a>
+                        <a href="#contact" class="px-5 py-3 rounded-lg bg-electric-600 hover:bg-electric-500 text-white font-mono text-xs font-semibold tracking-wider flex items-center gap-2 transition-all shadow-lg shadow-electric-500/10">
+                            Contact Node
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 relative flex items-center justify-center">
+                    <div class="w-full max-w-[380px] aspect-square rounded-full border border-dashed border-electric-500/20 flex items-center justify-center relative animate-[spin_120s_linear_infinite]">
+                        <div class="absolute w-[80%] aspect-square rounded-full border border-dashed border-violetAccent-500/20 flex items-center justify-center animate-[spin_60s_linear_infinite_reverse]">
+                            <div class="absolute w-[60%] aspect-square rounded-full bg-gradient-to-tr from-electric-950 to-navy-900 border border-white/10 flex flex-col items-center justify-center text-center p-6 shadow-2xl">
+                                <span class="font-mono text-[10px] text-electric-400 uppercase tracking-widest mb-1">Node Map</span>
+                                <span class="font-mono text-sm text-slate-300 font-bold">Final Year</span>
+                                <span class="text-[10px] text-slate-500 mt-1">B.Sc. IT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute top-10 left-10 font-mono text-[10px] text-slate-500 border border-white/5 p-2 bg-navy-950/80 rounded">
+                        SYS.LOC // TRICHY, IND
+                    </div>
+                    <div class="absolute bottom-10 right-10 font-mono text-[10px] text-slate-500 border border-white/5 p-2 bg-navy-950/80 rounded">
+                        COORD_INIT // OK
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ACADEMIC DASHBOARD -->
+        <section id="academic-dashboard" class="py-24 px-6 relative border-t border-white/5 bg-navy-900/20">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="font-mono text-xs text-electric-400 tracking-widest uppercase">Academic Intelligence</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 font-mono">Continuous Learning Dashboard</h2>
+                    <p class="text-slate-400 mt-2 font-mono text-xs">Performance parameters mapping semesters and project parameters</p>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Performance -->
+                    <div class="glass-panel glass-panel-hover p-6 rounded-xl relative overflow-hidden transition-all duration-300 group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-electric-500/5 rounded-full blur-2xl -mr-6 -mt-6"></div>
+                        <span class="font-mono text-[10px] text-slate-400 tracking-widest uppercase">Performance Standard</span>
+                        <div class="text-4xl font-extrabold text-white my-3 tracking-tight font-mono">89.13%</div>
+                        <p class="text-xs text-slate-400">Maintained across IT foundational and core modules.</p>
+                    </div>
+
+                    <!-- Rank -->
+                    <div class="glass-panel glass-panel-hover p-6 rounded-xl relative overflow-hidden transition-all duration-300 group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-violetAccent-500/5 rounded-full blur-2xl -mr-6 -mt-6"></div>
+                        <span class="font-mono text-[10px] text-slate-400 tracking-widest uppercase">Department Stand</span>
+                        <div class="text-4xl font-extrabold text-white my-3 tracking-tight font-mono">Rank 1</div>
+                        <p class="text-xs text-slate-400">Class academic standing tracked over Semesters I - IV.</p>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="glass-panel glass-panel-hover p-6 rounded-xl relative overflow-hidden transition-all duration-300 group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-electric-500/5 rounded-full blur-2xl -mr-6 -mt-6"></div>
+                        <span class="font-mono text-[10px] text-slate-400 tracking-widest uppercase">Practical Case Work</span>
+                        <div class="text-4xl font-extrabold text-white my-3 tracking-tight font-mono">3+ <span class="text-lg font-light text-slate-400">Active</span></div>
+                        <p class="text-xs text-slate-400">Integrated structural, management, and tracking software studies.</p>
+                    </div>
+
+                    <!-- Leadership Roles -->
+                    <div class="glass-panel glass-panel-hover p-6 rounded-xl relative overflow-hidden transition-all duration-300 group">
+                        <div class="absolute top-0 right-0 w-24 h-24 bg-violetAccent-500/5 rounded-full blur-2xl -mr-6 -mt-6"></div>
+                        <span class="font-mono text-[10px] text-slate-400 tracking-widest uppercase">Impact Coordinates</span>
+                        <div class="text-4xl font-extrabold text-white my-3 tracking-tight font-mono">4+ <span class="text-lg font-light text-slate-400">Roles</span></div>
+                        <p class="text-xs text-slate-400">Organizational, representative, and student coordination mandates.</p>
+                    </div>
+
+                </div>
+
+                <!-- Secondary Track Markers -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 font-mono">
+                    <div class="glass-panel p-5 rounded-lg flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-code-branch text-electric-400 text-lg"></i>
+                            <span class="text-xs text-slate-300">Practical Projects Completed</span>
+                        </div>
+                        <span class="text-xs font-bold text-white bg-white/5 px-2.5 py-1 rounded border border-white/5">03 Active</span>
+                    </div>
+                    <div class="glass-panel p-5 rounded-lg flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-industry text-violetAccent-400 text-lg"></i>
+                            <span class="text-xs text-slate-300">Targeted Internship Experience</span>
+                        </div>
+                        <span class="text-xs font-bold text-white bg-white/5 px-2.5 py-1 rounded border border-white/5">01 Completed</span>
+                    </div>
+                    <div class="glass-panel p-5 rounded-lg flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-calendar-days text-electric-400 text-lg"></i>
+                            <span class="text-xs text-slate-300">Evaluated Semesters</span>
+                        </div>
+                        <span class="text-xs font-bold text-white bg-white/5 px-2.5 py-1 rounded border border-white/5">Semesters I – IV</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEARNING EVOLUTION -->
+        <section id="learning-evolution" class="py-24 px-6 border-t border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="font-mono text-xs text-violetAccent-400 tracking-widest uppercase">Knowledge Progression</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 font-mono">Learning Evolution Journey</h2>
+                    <p class="text-slate-400 mt-2 font-mono text-xs">An interactive tracking array mapping development phases in academic computing</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <div class="lg:col-span-4 flex flex-col space-y-3">
+                        <button onclick="switchEvolutionStage(1)" id="stage-btn-1" class="evolution-btn w-full p-4 rounded-xl text-left border transition-all duration-200 glass-panel border-electric-500/40 bg-electric-500/5">
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-xs font-bold px-2 py-0.5 bg-electric-500 text-white rounded">STG 01</span>
+                                <span class="text-sm font-semibold text-white">Programming Foundations</span>
+                            </div>
+                        </button>
+                        
+                        <button onclick="switchEvolutionStage(2)" id="stage-btn-2" class="evolution-btn w-full p-4 rounded-xl text-left border border-white/5 transition-all duration-200 glass-panel">
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-xs font-bold px-2 py-0.5 bg-slate-800 text-slate-400 rounded">STG 02</span>
+                                <span class="text-sm font-semibold text-slate-300">Web Technologies</span>
+                            </div>
+                        </button>
+
+                        <button onclick="switchEvolutionStage(3)" id="stage-btn-3" class="evolution-btn w-full p-4 rounded-xl text-left border border-white/5 transition-all duration-200 glass-panel">
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-xs font-bold px-2 py-0.5 bg-slate-800 text-slate-400 rounded">STG 03</span>
+                                <span class="text-sm font-semibold text-slate-300">Database Systems</span>
+                            </div>
+                        </button>
+
+                        <button onclick="switchEvolutionStage(4)" id="stage-btn-4" class="evolution-btn w-full p-4 rounded-xl text-left border border-white/5 transition-all duration-200 glass-panel">
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-xs font-bold px-2 py-0.5 bg-slate-800 text-slate-400 rounded">STG 04</span>
+                                <span class="text-sm font-semibold text-slate-300">Advanced Learning</span>
+                            </div>
+                        </button>
+
+                        <button onclick="switchEvolutionStage(5)" id="stage-btn-5" class="evolution-btn w-full p-4 rounded-xl text-left border border-white/5 transition-all duration-200 glass-panel">
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-xs font-bold px-2 py-0.5 bg-slate-800 text-slate-400 rounded">STG 05</span>
+                                <span class="text-sm font-semibold text-slate-300">Practical Application</span>
+                            </div>
+                        </button>
+
+                        <button onclick="switchEvolutionStage(6)" id="stage-btn-6" class="evolution-btn w-full p-4 rounded-xl text-left border border-white/5 transition-all duration-200 glass-panel">
+                            <div class="flex items-center gap-3">
+                                <span class="font-mono text-xs font-bold px-2 py-0.5 bg-slate-800 text-slate-400 rounded">STG 06</span>
+                                <span class="text-sm font-semibold text-slate-300">Professional Growth</span>
+                            </div>
+                        </button>
+                    </div>
+
+                    <div class="lg:col-span-8 glass-panel p-8 rounded-xl border border-white/10 min-h-[340px] flex flex-col justify-between">
+                        <div id="evolution-content" class="transition-opacity duration-150">
+                            <div class="space-y-4">
+                                <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+                                    <h3 class="text-xl font-bold text-white">Programming Foundations</h3>
+                                    <span class="font-mono text-xs text-electric-400 uppercase tracking-widest ml-auto">Initiated</span>
+                                </div>
+                                <p class="text-sm text-slate-300 leading-relaxed">
+                                    Establishing rigorous academic roots via systematic object-oriented and structural computational architectures. Focus lies heavily on dynamic memory usage, code modularity, and systemic debugging paradigms.
+                                </p>
+                                <div class="pt-4">
+                                    <span class="font-mono text-xs text-slate-400 uppercase block mb-3">Core Modules Mapped</span>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-slate-300 rounded-md">C</span>
+                                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-slate-300 rounded-md">Java</span>
+                                        <span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-slate-300 rounded-md">Python</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-500">
+                            <span>MAPPED COORD_STAGE // OK</span>
+                            <span id="evolution-stage-num">01 / 06</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNICAL COMPETENCIES -->
+        <section id="technical-profile" class="py-24 px-6 border-t border-white/5 bg-navy-900/10">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="font-mono text-xs text-electric-400 tracking-widest uppercase">System Integration</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 font-mono">Technical Profile</h2>
+                    <p class="text-slate-400 mt-2 font-mono text-xs">Simplified inventory of core program mechanics, platforms, and databases</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 hover:border-electric-500/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 border-b border-white/5 pb-4 mb-4">
+                                <div class="w-8 h-8 rounded-lg bg-electric-500/10 flex items-center justify-center text-electric-400">
+                                    <i class="fa-solid fa-code text-sm"></i>
+                                </div>
+                                <h3 class="font-semibold text-white">Programming</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-500 rounded-full"></span> Python</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-500 rounded-full"></span> Java</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-500 rounded-full"></span> C</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 hover:border-violetAccent-500/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 border-b border-white/5 pb-4 mb-4">
+                                <div class="w-8 h-8 rounded-lg bg-violetAccent-500/10 flex items-center justify-center text-violetAccent-400">
+                                    <i class="fa-solid fa-laptop-code text-sm"></i>
+                                </div>
+                                <h3 class="font-semibold text-white">Web Technologies</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-violetAccent-400 rounded-full"></span> HTML</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-violetAccent-400 rounded-full"></span> CSS</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-violetAccent-400 rounded-full"></span> JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 hover:border-electric-500/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 border-b border-white/5 pb-4 mb-4">
+                                <div class="w-8 h-8 rounded-lg bg-electric-500/10 flex items-center justify-center text-electric-400">
+                                    <i class="fa-solid fa-database text-sm"></i>
+                                </div>
+                                <h3 class="font-semibold text-white">Databases</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-500 rounded-full"></span> MySQL</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-500 rounded-full"></span> MongoDB</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 hover:border-violetAccent-500/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 border-b border-white/5 pb-4 mb-4">
+                                <div class="w-8 h-8 rounded-lg bg-violetAccent-500/10 flex items-center justify-center text-violetAccent-400">
+                                    <i class="fa-solid fa-microchip text-sm"></i>
+                                </div>
+                                <h3 class="font-semibold text-white">Emerging Tech</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-violetAccent-400 rounded-full"></span> Artificial Intelligence</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-violetAccent-400 rounded-full"></span> Machine Learning</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-violetAccent-400 rounded-full"></span> NLP Concepts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 hover:border-electric-500/20 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 border-b border-white/5 pb-4 mb-4">
+                                <div class="w-8 h-8 rounded-lg bg-electric-500/10 flex items-center justify-center text-electric-400">
+                                    <i class="fa-solid fa-screwdriver-wrench text-sm"></i>
+                                </div>
+                                <h3 class="font-semibold text-white">Tools</h3>
+                            </div>
+                            <ul class="space-y-2 text-sm text-slate-300">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-500 rounded-full"></span> Git</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-electric-500 rounded-full"></span> GitHub</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ANALYTICAL IMPLEMENTATIONS -->
+        <section id="featured-projects" class="py-24 px-6 border-t border-white/5 bg-navy-900/10">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="font-mono text-xs text-electric-400 tracking-widest uppercase">Project Case Studies</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 font-mono">Analytical Implementations</h2>
+                    <p class="text-slate-400 mt-2 font-mono text-xs">Independent builds presented as systematic technical evaluations</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Case Study 1 -->
+                    <div class="glass-panel rounded-xl overflow-hidden border border-white/5 flex flex-col justify-between">
+                        <div>
+                            <div class="p-6 border-b border-white/5 bg-white/5 flex items-center justify-between">
+                                <span class="font-mono text-xs text-electric-400">PROJECT FILE // 01</span>
+                                <span class="text-[10px] font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded uppercase">Functional</span>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <h3 class="text-lg font-bold text-white tracking-tight font-mono">AI Market Trend Forecaster & Sentiment Analysis</h3>
+                                
+                                <div class="w-full bg-slate-950 rounded-lg p-3 border border-white/10 font-mono text-[10px] text-slate-400 space-y-2">
+                                    <div class="flex items-center justify-between border-b border-white/5 pb-1 text-[8px]">
+                                        <span>SENTIMENT_PARSER v1.0</span>
+                                        <span class="text-emerald-400">ONLINE</span>
+                                    </div>
+                                    <div class="flex items-end gap-1.5 h-12 pt-2">
+                                        <div class="bg-electric-500 w-1/5 h-[80%] rounded-t-sm animate-pulse"></div>
+                                        <div class="bg-violetAccent-500 w-1/5 h-[65%] rounded-t-sm"></div>
+                                        <div class="bg-electric-500 w-1/5 h-[40%] rounded-t-sm"></div>
+                                        <div class="bg-emerald-500 w-1/5 h-[95%] rounded-t-sm"></div>
+                                        <div class="bg-violetAccent-500 w-1/5 h-[50%] rounded-t-sm"></div>
+                                    </div>
+                                    <div class="text-[8px] text-slate-500">>> sentiment_vector: POSITIVE (89.23%)</div>
+                                </div>
+
+                                <div class="space-y-1.5">
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        An analytical program designed to gather text data, evaluate computational public opinion vectors, and forecast movement patterns using basic machine learning mechanics.
+                                    </p>
+                                </div>
+
+                                <div class="space-y-1.5 pt-2">
+                                    <span class="text-xs font-mono text-slate-400 block uppercase">Core Methodologies Mapped:</span>
+                                    <ul class="text-[11px] text-slate-300 space-y-1 pl-1">
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-electric-500"></i> Data Analysis</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-electric-500"></i> Machine Learning Concepts</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-electric-500"></i> NLP Techniques</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-electric-500"></i> Sentiment Analysis</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-electric-500"></i> Forecasting Models</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 border-t border-white/5 bg-navy-950/40">
+                            <span class="text-[10px] font-mono text-slate-500">SYS_ID // AIMT-01</span>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="glass-panel rounded-xl overflow-hidden border border-white/5 flex flex-col justify-between">
+                        <div>
+                            <div class="p-6 border-b border-white/5 bg-white/5 flex items-center justify-between">
+                                <span class="font-mono text-xs text-violetAccent-400">PROJECT FILE // 02</span>
+                                <span class="text-[10px] font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded uppercase">Functional</span>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <h3 class="text-lg font-bold text-white tracking-tight font-mono">Salon Service Management System</h3>
+                                
+                                <div class="w-full bg-slate-950 rounded-lg p-3 border border-white/10 font-mono text-[10px] text-slate-400 space-y-1.5">
+                                    <div class="flex items-center justify-between border-b border-white/5 pb-1 text-[8px]">
+                                        <span>SCHEDULER_DAEMON</span>
+                                        <span class="text-violetAccent-400">MUTEX_OK</span>
+                                    </div>
+                                    <div class="space-y-1">
+                                        <div class="bg-white/5 p-1 rounded flex justify-between text-[8px]">
+                                            <span>UID: 9283 - S. Kumar</span>
+                                            <span class="text-emerald-400">CONFIRMED</span>
+                                        </div>
+                                        <div class="bg-white/5 p-1 rounded flex justify-between text-[8px]">
+                                            <span>UID: 1204 - M. Senthil</span>
+                                            <span class="text-amber-400">PENDING</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-1.5">
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        A systematic booking and CRUD evaluation solution aimed at establishing multi-user transaction integrity and seamless relational data flows.
+                                    </p>
+                                </div>
+
+                                <div class="space-y-1.5 pt-2">
+                                    <span class="text-xs font-mono text-slate-400 block uppercase">Core Methodologies Mapped:</span>
+                                    <ul class="text-[11px] text-slate-300 space-y-1 pl-1">
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-violetAccent-500"></i> Secure Authentication</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-violetAccent-500"></i> Database Schema Design</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-violetAccent-500"></i> CRUD Operations Control</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-violetAccent-500"></i> Appointment Allocation Engine</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 border-t border-white/5 bg-navy-950/40">
+                            <span class="text-[10px] font-mono text-slate-500">SYS_ID // SSMS-02</span>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="glass-panel rounded-xl overflow-hidden border border-white/5 flex flex-col justify-between">
+                        <div>
+                            <div class="p-6 border-b border-white/5 bg-white/5 flex items-center justify-between">
+                                <span class="font-mono text-xs text-electric-400">PROJECT FILE // 03</span>
+                                <span class="text-[10px] font-mono bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded uppercase">Functional</span>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <h3 class="text-lg font-bold text-white tracking-tight font-mono">FitFlex – Personal Fitness Companion</h3>
+                                
+                                <div class="w-full bg-slate-950 rounded-lg p-3 border border-white/10 font-mono text-[10px] text-slate-400 space-y-1.5">
+                                    <div class="flex items-center justify-between border-b border-white/5 pb-1 text-[8px]">
+                                        <span>FITFLEX_UI</span>
+                                        <span class="text-electric-400">CLIENT_RENDER</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2 text-[8px]">
+                                        <div class="bg-white/5 p-1 rounded text-center">
+                                            <div>CALORIES</div>
+                                            <div class="text-white font-bold">420 kcal</div>
+                                        </div>
+                                        <div class="bg-white/5 p-1 rounded text-center">
+                                            <div>TARGET TIME</div>
+                                            <div class="text-white font-bold">45 min</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-1.5">
+                                    <p class="text-xs text-slate-300 leading-relaxed">
+                                        A functional frontend platform rendering interactive dashboard trackers for individual health and physical training patterns.
+                                    </p>
+                                </div>
+
+                                <div class="space-y-1.5 pt-2">
+                                    <span class="text-xs font-mono text-slate-400 block uppercase">Core Methodologies Mapped:</span>
+                                    <ul class="text-[11px] text-slate-300 space-y-1 pl-1">
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-electric-500"></i> Fluid Responsive Design</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-electric-500"></i> User Experience Mapping (UX)</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-electric-500"></i> Interactive UI Elements</li>
+                                        <li class="flex items-center gap-1.5"><i class="fa-solid fa-circle-nodes text-[8px] text-electric-500"></i> Structural Layout Standards</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 border-t border-white/5 bg-navy-950/40">
+                            <span class="text-[10px] font-mono text-slate-500">SYS_ID // FF-03</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS HUB -->
+        <section id="certifications" class="py-24 px-6 border-t border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="font-mono text-xs text-violetAccent-400 tracking-widest uppercase">Verified Standards</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 font-mono">Certifications Hub</h2>
+                    <p class="text-slate-400 mt-2 font-mono text-xs">Accredited certifications and educational milestones complete</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Cert 1 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-violetAccent-400 uppercase tracking-widest block mb-4">Google</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Google AI Essentials</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-violetAccent-400 uppercase tracking-widest block mb-4">Google</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Google Prompting Essentials</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-electric-400 uppercase tracking-widest block mb-4">NPTEL</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Cloud Computing</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-electric-400 uppercase tracking-widest block mb-4">NPTEL</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Programming in Java</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-electric-400 uppercase tracking-widest block mb-4">NPTEL</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Database Management System</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 6 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-violetAccent-400 uppercase tracking-widest block mb-4">Cisco</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Introduction to Cybersecurity</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 7 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-violetAccent-400 uppercase tracking-widest block mb-4">Infosys Springboard</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Artificial Intelligence Learning Program</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 8 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-electric-400 uppercase tracking-widest block mb-4">Naan Mudhalvan</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Back End Development using Node.js</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 9 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-violetAccent-400 uppercase tracking-widest block mb-4">SmartBridge</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">MongoDB Database Admin Path</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 10 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-electric-400 uppercase tracking-widest block mb-4">MathWorks</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Machine Learning Onramp</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 11 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-violetAccent-400 uppercase tracking-widest block mb-4">UiPath Academy</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Automation Explorer</h3>
+                        </div>
+                    </div>
+
+                    <!-- Cert 12 -->
+                    <div class="glass-panel p-5 rounded-xl border border-white/5 hover:scale-[1.02] transition-transform duration-200 flex flex-col justify-between">
+                        <div>
+                            <span class="font-mono text-[9px] text-violetAccent-400 uppercase tracking-widest block mb-4">Celonis Academy</span>
+                            <h3 class="text-sm font-bold text-white tracking-tight mb-2">Academic Process Mining Fundamentals</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP & ACHIEVEMENTS -->
+        <section id="leadership" class="py-24 px-6 border-t border-white/5 bg-navy-900/10">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="font-mono text-xs text-electric-400 tracking-widest uppercase">System Milestones</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 font-mono">Leadership & Achievements</h2>
+                    <p class="text-slate-400 mt-2 font-mono text-xs">Administrative and performance roles verified within the academic record</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 relative overflow-hidden flex flex-col justify-between hover:scale-[1.01] transition-transform">
+                        <div>
+                            <div class="text-lg mb-4">🏆</div>
+                            <h3 class="text-md font-bold text-white mb-2 font-mono">Department Rank 1</h3>
+                            <p class="text-xs text-slate-400">Sustained top evaluation metrics across Semesters I–IV inside the IT group.</p>
+                        </div>
+                        <span class="text-[9px] font-mono text-slate-500 mt-6 block uppercase tracking-widest">Academic Distinction</span>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 relative overflow-hidden flex flex-col justify-between hover:scale-[1.01] transition-transform">
+                        <div>
+                            <div class="text-lg mb-4">🎓</div>
+                            <h3 class="text-md font-bold text-white mb-2 font-mono">Class Representative</h3>
+                            <p class="text-xs text-slate-400">Selected coordinate lead (2024–2027) managing course tracking and schedules.</p>
+                        </div>
+                        <span class="text-[9px] font-mono text-slate-500 mt-6 block uppercase tracking-widest">Coordination</span>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 relative overflow-hidden flex flex-col justify-between hover:scale-[1.01] transition-transform">
+                        <div>
+                            <div class="text-lg mb-4">👥</div>
+                            <h3 class="text-md font-bold text-white mb-2 font-mono">Secretary, Rotaract</h3>
+                            <p class="text-xs text-slate-400">Administrated Rotaract Club coordinates (2025–2026), tracking program parameters.</p>
+                        </div>
+                        <span class="text-[9px] font-mono text-slate-500 mt-6 block uppercase tracking-widest">Administration</span>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 relative overflow-hidden flex flex-col justify-between hover:scale-[1.01] transition-transform">
+                        <div>
+                            <div class="text-lg mb-4">🚀</div>
+                            <h3 class="text-md font-bold text-white mb-2 font-mono">Vice President</h3>
+                            <p class="text-xs text-slate-400">Directing student association support within the Department of Computer Science Association.</p>
+                        </div>
+                        <span class="text-[9px] font-mono text-slate-500 mt-6 block uppercase tracking-widest">Student Executive</span>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 relative overflow-hidden flex flex-col justify-between hover:scale-[1.01] transition-transform">
+                        <div>
+                            <div class="text-lg mb-4">✈️</div>
+                            <h3 class="text-md font-bold text-white mb-2 font-mono">NCC Air Wing Cadet</h3>
+                            <p class="text-xs text-slate-400">Developing structural group alignment and performance protocol inside military routines.</p>
+                        </div>
+                        <span class="text-[9px] font-mono text-slate-500 mt-6 block uppercase tracking-widest">Discipline Core</span>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 relative overflow-hidden flex flex-col justify-between hover:scale-[1.01] transition-transform">
+                        <div>
+                            <div class="text-lg mb-4">💡</div>
+                            <h3 class="text-md font-bold text-white mb-2 font-mono">Sprint Exploration</h3>
+                            <p class="text-xs text-slate-400">Participated in multiple regional hackathons and ideathons targeting logic modeling.</p>
+                        </div>
+                        <span class="text-[9px] font-mono text-slate-500 mt-6 block uppercase tracking-widest">Collaboration</span>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 relative overflow-hidden flex flex-col justify-between hover:scale-[1.01] transition-transform">
+                        <div>
+                            <div class="text-lg mb-4">🎤</div>
+                            <h3 class="text-md font-bold text-white mb-2 font-mono">Academic Presentation</h3>
+                            <p class="text-xs text-slate-400">Recognized for clear public speaking and structured paper evaluations in student sessions.</p>
+                        </div>
+                        <span class="text-[9px] font-mono text-slate-500 mt-6 block uppercase tracking-widest">Communication</span>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border border-white/5 relative overflow-hidden flex flex-col justify-between hover:scale-[1.01] transition-transform">
+                        <div>
+                            <div class="text-lg mb-4">📅</div>
+                            <h3 class="text-md font-bold text-white mb-2 font-mono">Student Engagement</h3>
+                            <p class="text-slate-400">Planning campus event pathways, managing student assets, and tracking timeline completions.</p>
+                        </div>
+                        <span class="text-[9px] font-mono text-slate-500 mt-6 block uppercase tracking-widest">Project Management</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CURRENT FOCUS -->
+        <section id="current-focus" class="py-24 px-6 border-t border-white/5 bg-navy-900/10">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-xl mx-auto mb-16">
+                    <span class="font-mono text-xs text-electric-400 tracking-widest uppercase">Active Studies</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2 font-mono">Active Explorations</h2>
+                    <p class="text-slate-400 mt-2 font-mono text-xs">Direct subjects under active tracking for professional growth and engineering curiosity</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-electric-500 relative">
+                        <h3 class="text-md font-mono font-bold text-white mb-2">Data Structures</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Analyzing algorithmic space complexity benchmarks, sorting parameters, and lookup protocols.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-violetAccent-500 relative">
+                        <h3 class="text-md font-mono font-bold text-white mb-2">Java Programming</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Assessing JVM compiler optimizations, exception models, and memory reference patterns.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-electric-500 relative">
+                        <h3 class="text-md font-mono font-bold text-white mb-2">Cloud Technologies</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Evaluating virtual storage arrays, scalable microservices, and identity management mechanisms.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-violetAccent-500 relative">
+                        <h3 class="text-md font-mono font-bold text-white mb-2">Artificial Intelligence</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Evaluating regression frameworks, heuristic optimization paths, and dataset parsing models.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-electric-500 relative">
+                        <h3 class="text-md font-mono font-bold text-white mb-2">Research & Innovation</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Reviewing systems architectures, academic computing papers, and system scalability trade-offs.</p>
+                    </div>
+
+                    <div class="glass-panel p-6 rounded-xl border-l-4 border-violetAccent-500 relative">
+                        <h3 class="text-md font-mono font-bold text-white mb-2">Professional Development</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Refining organizational design approaches, leadership coordination paths, and technical presentation metrics.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <footer id="contact" class="mt-auto border-t border-white/5 bg-navy-950 px-6 py-20 relative">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-electric-500 to-violetAccent-500 flex items-center justify-center text-white font-mono font-bold text-lg">
+                            SS
+                        </div>
+                        <div>
+                            <div class="font-mono text-sm tracking-wider font-bold text-white">SANJANAA S</div>
+                            <div class="text-[10px] text-slate-400 font-mono tracking-widest uppercase">IT Undergrad Node</div>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-md leading-relaxed">
+                        Actively seeking opportunities to learn, contribute, and grow within technology-driven environments.
+                    </p>
+                    <div class="font-mono text-xs text-slate-500">
+                        COORDINATES // SHRIMATI INDIRA GANDHI COLLEGE <br>
+                        BHARATHIDASAN UNIVERSITY, TRICHY, TN, INDIA
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-8 lg:text-right">
+                    <div class="flex flex-col lg:items-end space-y-3">
+                        <span class="font-mono text-xs text-electric-400 uppercase tracking-widest">Connect Matrix</span>
+                        <div class="flex flex-wrap gap-3 lg:justify-end">
+                            
+                            <!-- Resume Node Redirect -->
+                            <a href="assets/College Resume.pdf" target="_blank" class="px-4 py-2.5 rounded-lg bg-electric-600 hover:bg-electric-500 text-white text-xs font-mono transition-all flex items-center gap-2 group relative">
+                                <i class="fa-regular fa-file-pdf"></i> View Resume
+                                <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-navy-900 border border-white/10 text-[9px] text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">View PDF in Tab</span>
+                            </a>
+
+                            <a href="https://linkedin.com/in/sanjanaa27" target="_blank" class="px-4 py-2.5 rounded-lg glass-panel text-xs font-mono text-slate-300 hover:text-white hover:border-white/20 transition-all flex items-center gap-2 group relative">
+                                <i class="fa-brands fa-linkedin text-sm"></i> LinkedIn
+                                <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-navy-900 border border-white/10 text-[9px] text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">View LinkedIn Profile</span>
+                            </a>
+                            
+                            <a href="https://github.com/Sanjanaa343" target="_blank" class="px-4 py-2.5 rounded-lg glass-panel text-xs font-mono text-slate-300 hover:text-white hover:border-white/20 transition-all flex items-center gap-2 group relative">
+                                <i class="fa-brands fa-github text-sm"></i> GitHub
+                                <span class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-navy-900 border border-white/10 text-[9px] text-white px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">View GitHub Profile</span>
+                            </a>
+
+                           
+                        </div>
+                    </div>
+                    
+                    <div class="pt-8 border-t border-white/5 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 text-xs font-mono text-slate-500">
+                        <span>SYSTEM PORTFOLIO ENGINE v1.2</span>
+                        <span>© 2026 SANJANAA S. ALL RIGHTS RESERVED</span>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT: PARTICLE CANVAS & TIMELINE CONTROLS -->
+    <script>
+        const evolutionStages = {
+            1: {
+                title: "Programming Foundations",
+                desc: "Establishing academic roots via systematic object-oriented and structural computational architectures. Focus lies heavily on dynamic memory usage, code modularity, and systemic debugging paradigms.",
+                status: "Initiated",
+                modules: ["C", "Java", "Python"]
+            },
+            2: {
+                title: "Web Technologies",
+                desc: "Mapping Client-Side behaviors, functional visual layouts, dynamic event controls, and standard document manipulation models using modern design structures.",
+                status: "Completed",
+                modules: ["HTML", "CSS", "JavaScript"]
+            },
+            3: {
+                title: "Database Systems",
+                desc: "Structuring persistent data models. Exploring the architecture of schema configurations, operational queries, validation rules, and structural concurrency protocols.",
+                status: "Completed",
+                modules: ["MySQL", "MongoDB"]
+            },
+            4: {
+                title: "Advanced Learning",
+                desc: "Extending computing boundaries towards modern infrastructure models. Investigating resource virtualization, network defenses, and cognitive processing mechanisms.",
+                status: "In Progress",
+                modules: ["Cloud Computing", "Cybersecurity", "Artificial Intelligence"]
+            },
+            5: {
+                title: "Practical Application",
+                desc: "Translating academic and theoretical foundations into functional real-world environments through direct internship exposure, hands-on academic projects, and collaborative design hackathons.",
+                status: "Active Execution",
+                modules: ["Internship Experience", "Academic Projects", "Hackathons and Ideathons Participation"]
+            },
+            6: {
+                title: "Professional Growth",
+                desc: "Fusing programmatic mastery with systemic team synchronization, administrative metrics, institutional leadership roles, and structured speaking platforms.",
+                status: "Continuous Growth",
+                modules: ["Leadership", "Communication", "Team Collaboration"]
+            }
+        };
+
+        function switchEvolutionStage(stageNum) {
+            const buttons = document.querySelectorAll('.evolution-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-electric-500/40', 'bg-electric-500/5');
+                btn.classList.add('border-white/5');
+                const badge = btn.querySelector('span');
+                if (badge) {
+                    badge.classList.remove('bg-electric-500', 'text-white');
+                    badge.classList.add('bg-slate-800', 'text-slate-400');
+                }
+                const label = btn.querySelector('.text-sm');
+                if (label) {
+                    label.classList.remove('text-white');
+                    label.classList.add('text-slate-300');
+                }
+            });
+
+            const activeBtn = document.getElementById(`stage-btn-${stageNum}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-white/5');
+                activeBtn.classList.add('border-electric-500/40', 'bg-electric-500/5');
+                const activeBadge = activeBtn.querySelector('span');
+                if (activeBadge) {
+                    activeBadge.classList.remove('bg-slate-800', 'text-slate-400');
+                    activeBadge.classList.add('bg-electric-500', 'text-white');
+                }
+                const activeLabel = activeBtn.querySelector('.text-sm');
+                if (activeLabel) {
+                    activeLabel.classList.remove('text-slate-300');
+                    activeLabel.classList.add('text-white');
+                }
+            }
+
+            const stageData = evolutionStages[stageNum];
+            const contentDiv = document.getElementById('evolution-content');
+            
+            contentDiv.style.opacity = '0';
+            setTimeout(() => {
+                let modulesHTML = '';
+                stageData.modules.forEach(mod => {
+                    modulesHTML += `<span class="px-3 py-1 bg-white/5 border border-white/10 text-xs font-mono text-slate-300 rounded-md">${mod}</span>`;
+                });
+
+                contentDiv.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 border-b border-white/10 pb-4">
+                            <h3 class="text-xl font-bold text-white">${stageData.title}</h3>
+                            <span class="font-mono text-xs text-electric-400 uppercase tracking-widest ml-auto">${stageData.status}</span>
+                        </div>
+                        <p class="text-sm text-slate-300 leading-relaxed">
+                            ${stageData.desc}
+                        </p>
+                        <div class="pt-4">
+                            <span class="font-mono text-xs text-slate-400 uppercase block mb-3">Core Modules Mapped</span>
+                            <div class="flex flex-wrap gap-2">
+                                ${modulesHTML}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                contentDiv.style.opacity = '1';
+                document.getElementById('evolution-stage-num').innerText = `0${stageNum} / 06`;
+            }, 150);
+        }
+
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let particles = [];
+        let mouse = { x: null, y: null, radius: 150 };
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            particles = [];
+            const numberOfParticles = Math.floor((canvas.width * canvas.height) / 16000);
+            for (let i = 0; i < numberOfParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.baseSize = Math.random() * 1.5 + 0.5;
+                this.size = this.baseSize;
+                this.speedX = (Math.random() - 0.5) * 0.4;
+                this.speedY = (Math.random() - 0.5) * 0.4;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x > canvas.width) this.x = 0;
+                else if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                else if (this.y < 0) this.y = canvas.height;
+
+                if (mouse.x && mouse.y) {
+                    let dx = mouse.x - this.x;
+                    let dy = mouse.y - this.y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+                    if (distance < mouse.radius) {
+                        this.size = this.baseSize * 1.8;
+                    } else {
+                        this.size = this.baseSize;
+                    }
+                }
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(96, 165, 250, 0.6)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function connectParticles() {
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    let dx = particles[a].x - particles[b].x;
+                    let dy = particles[a].y - particles[b].y;
+                    let distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 110) {
+                        let opacity = (1 - (distance / 110)) * 0.12;
+                        ctx.strokeStyle = `rgba(96, 165, 250, ${opacity})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            connectParticles();
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', initCanvas);
+        window.addEventListener('mousemove', (e) => {
+            mouse.x = e.x;
+            mouse.y = e.y;
+        });
+        window.addEventListener('mouseout', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+
+        initCanvas();
+        animate();
+    </script>
+</body>
+</html>
